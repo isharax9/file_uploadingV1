@@ -1,13 +1,9 @@
 <?php
 
-$x = $_POST["x"];
-$y = $_POST["y"];
-$f = $_FILES["f"]["tmp_name"];
+$mobile = $_POST["mobile"];
+$profile_picture_location = $_FILES["profile_picture"]["tmp_name"];
 
-echo($x);
-echo($y);
-echo($f);
+move_uploaded_file($profile_picture_location,"uploads/".$mobile.".png");
 
-move_uploaded_file($f,"uploads/a.jpeg")
 
 ?>
